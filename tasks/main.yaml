@@ -1,0 +1,25 @@
+    # 2. Install and Configure Database :-
+    - name: Install MySQL database
+      apt: name={{item}} state=present
+      with_items:               # terminal>:-   apt-get install -y mysql-server mysql-client
+        - mysql-server
+        - mysql-client
+
+
+    - name: Start MySQL Service
+      service:
+        name: mysql
+        state: present
+        enabled: yes  # when the server restarts the service will automatically be started.
+
+    # Create database and database users :-
+    - name: Create Application Database
+      mysql_db: name={{db_name}} state=present    #  terminal mysql>:-   CREATE DATABASE employee_db;
+
+    - name: Create Database User
+      mysql_user:
+        name: "{{ db_user }}"
+        password: "{{ db_user_password }}"
+        priv: '*.*:ALL'
+        state: present
+        host: '%'
