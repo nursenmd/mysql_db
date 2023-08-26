@@ -10,9 +10,9 @@
       service:
         name: mysql
         state: present
-        enabled: yes  # When the server restarts the service will automatically be started.
+        enabled: yes  # When the server restarts the service will be automatically started.
 
-    # Create database and database users :-
+    # Create database and database users:
     - name: Create Application Database
       mysql_db: name={{db_name}} state=present    #  CREATE DATABASE employee_db;
 
