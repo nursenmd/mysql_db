@@ -7,7 +7,7 @@ Python must be installed
 # Example Playbook:
 Including an example of how to use your role 
 `
-- hosts: servers
+- hosts: servers'
     roles:
        - mysql_db
 `
