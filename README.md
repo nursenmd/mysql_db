@@ -1,21 +1,21 @@
-# MYSQL DB:
+# MYSQL DB
 This roles installs Mysql database
 
-# Dependencies:
-Python must be installed
+# Dependencies
+Python must
 
-# Example Playbook:
-Including an example of how to use your role 
+# Example Playbook
+How to use a role 
 ```
 - hosts: servers
      roles:
         - mysql_db
 ```
 
-# Licence:
+# Licence
 BSD
 
-# About Author:
-An optional section for the role authors to include
+# About Author
+nursen
 
 
